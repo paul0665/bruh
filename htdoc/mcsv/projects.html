@@ -1,0 +1,169 @@
+﻿<!--
+  ~ Copyright (C)  2020 paul0665(as know as paul)
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant-TW">
+
+<head>
+    <title>開源專案</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <link rel=stylesheet type="text/css" href="css/nvb.css">
+    <link rel=stylesheet type="text/css" href="css/project.css">
+    <script src="js/resize.js"></script>
+    <script src="js/rwd.js"></script>
+    <script src="js/ProjectRWDFilter.js"></script>
+    <script src="js/ProjectClassAdder.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+<iframe src="head.html"
+        onload="this.before((this.contentDocument.body||this.contentDocument));this.remove()"></iframe>
+
+<div class="main" style="margin-top:230px">
+
+    <h1>Open source projects</h1>
+    <hr>
+
+    <div id="RwdFilter" class="FilterOverlay">
+        <div class="FilterOverlay-content">
+            <a onclick="filterSelection('all');closeRwdFilter()" href="#"> 顯示所有</a>
+            <a onclick="filterSelection('plugins');closeRwdFilter()" href="#"> 插件</a>
+            <a onclick="filterSelection('machinelearning');closeRwdFilter()" href="#"> 深度學習</a>
+            <a onclick="filterSelection('website');closeRwdFilter()" href="#"> 網頁</a>
+            <a onclick="filterSelection('unity');closeRwdFilter()" href="#"> Unity</a>
+            <a onclick="filterSelection('deprecated');closeRwdFilter()" href="#"> 已棄用</a>
+        </div>
+    </div>
+    <span class="FilterOverlayOpenBtn" style="font-size:50px;cursor:pointer;"
+          onclick="openRwdFilter()">&#9776; Filter</span>
+    <div id="myBtnContainer" class="FilterBtnContainer">
+        <button class="btn FilterSelected" onclick="filterSelection('all')"> 顯示所有</button>
+        <button class="btn" onclick="filterSelection('plugins')"> 插件</button>
+        <button class="btn" onclick="filterSelection('machinelearning')"> 深度學習</button>
+        <button class="btn" onclick="filterSelection('website')"> 網頁</button>
+        <button class="btn" onclick="filterSelection('unity')"> Unity</button>
+        <button class="btn" onclick="filterSelection('deprecated')"> 已棄用</button>
+    </div>
+
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+        <div class="column plugins">
+            <div class="content">
+                <a href="https://github.com/mc-serverworld/worldMISF"><img src="img/serverworld-logo.png"
+                                                                           alt="worldMISF" style="width:100%"></a>
+                <h4>worldMISF</h4>
+                <p>具彈性且自動化的伺服器整合管理架構</p>
+                <a class="github-button" href="https://github.com/mc-serverworld/worldSocket"
+                   data-color-scheme="no-preference: dark; light: dark; dark: dark;" aria-label="GitHub">view on
+                    github</a>
+                <a class="github-buttons" href="https://github.com/mc-serverworld/worldSocket/blob/master/LICENSE"><img
+                        src="https://img.shields.io/github/license/mc-serverworld/worldSocket" alt="worldSocket"></a>
+                <a class="github-buttons" href="https://jitpack.io/#mc-serverworld/worldSocket"><img
+                        src="https://jitpack.io/v/mc-serverworld/worldSocket.svg" alt="worldSocket"></a>
+
+            </div>
+        </div>
+        <div class="column plugins">
+            <div class="content">
+                <a href="https://github.com/mc-serverworld/worldMISF-libs"><img src="img/serverworld-logo.png"
+                                                                                alt="worldMISF-libs" style="width:100%"></a>
+                <h4>worldMISF-libs</h4>
+                <p>worldMISF的依賴函式庫</p>
+                <a class="github-button" href="https://github.com/mc-serverworld/worldMISF-lib"
+                   data-color-scheme="no-preference: dark; light: dark; dark: dark;" aria-label="GitHub">view on
+                    github</a>
+            </div>
+        </div>
+        <div class="column plugins">
+            <div class="content">
+                <a href="https://github.com/mc-serverworld/worldIdiot"><img src="img/serverworld-logo-old.png"
+                                                                            alt="worldIdiot" style="width:100%"></a>
+                <h4>worldIdiot</h4>
+                <p>使用資料庫的代理端玩家管理程式</p>
+                <a class="github-button" href="https://github.com/mc-serverworld/worldIdiot"
+                   data-color-scheme="no-preference: dark; light: dark; dark: dark;" aria-label="GitHub">view on
+                    github</a>
+            </div>
+        </div>
+        <div class="column machinelearning">
+            <div class="content">
+                <a href="https://github.com/mc-serverworld/worldTensorFlowJavaEx"><img
+                        src="img/TensorFlowWithJavaLogo.png" alt="worldTensorFlowJavaEx" style="width:100%"></a>
+                <h4>TensorFlowJavaEx</h4>
+                <p>使用java編寫TensorFlow的測試專案</p>
+                <a class="github-button" href="https://github.com/mc-serverworld/worldTensorFlowJavaEx"
+                   data-color-scheme="no-preference: dark; light: dark; dark: dark;" aria-label="GitHub">view on
+                    github</a>
+            </div>
+        </div>
+        <div class="column unity">
+            <div class="content">
+                <a href="https://github.com/paul0665/Unity-HelloWorld1"><img src="img/Nvidia%20BreadScene4.png"
+                                                                             alt="Nvidia%20BreadScene4"
+                                                                             style="width:100%"><img
+                        src="img/Nvidia%20BreadScene3.png" alt="Nvidia%20BreadScene3" style="width:100%"></a>
+                <h4>Unity-HelloWorld1(Nvidia Bread)</h4>
+                <p>光線追蹤/光線反射測試</p>
+                <a class="github-button" href="https://github.com/paul0665/Unity-HelloWorld1"
+                   data-color-scheme="no-preference: dark; light: dark; dark: dark;" aria-label="GitHub">view on
+                    github</a>
+            </div>
+        </div>
+        <div class="column website">
+            <div class="content">
+                <a href="https://github.com/paul0665/mcsv"><img src="img/nyan-cat.gif" alt="mcsv"
+                                                                style="width:100%"></a>
+                <h4>mcsv(website demo)</h4>
+                <p>此網頁的github頁面</p>
+                <a class="github-button" href="https://github.com/paul0665/mcsv"
+                   data-color-scheme="no-preference: dark; light: dark; dark: dark;" aria-label="GitHub">view on
+                    github</a>
+            </div>
+        </div>
+        <div class="column deprecated">
+            <div class="content">
+                <a href="https://github.com/mc-serverworld/worldSocket"><img src="img/serverworld-logo-old.png"
+                                                                             alt="worldSocket" style="width:100%"></a>
+                <h4>worldSocket(已棄用)</h4>
+                <p>主從式Socket訊息傳輸系統</p>
+                <a class="github-button" href="https://github.com/mc-serverworld/worldSocket"
+                   data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+                   aria-label="Follow @mc-serverworld on GitHub">view on github</a>
+                <a class="github-buttons" href="https://github.com/mc-serverworld/worldSocket/blob/master/LICENSE"><img
+                        src="https://img.shields.io/github/license/mc-serverworld/worldSocket" alt="worldSocket"></a>
+                <a class="github-buttons" href="https://jitpack.io/#mc-serverworld/worldSocket"><img
+                        src="https://jitpack.io/v/mc-serverworld/worldSocket.svg" alt="worldSocket"></a>
+            </div>
+        </div>
+        <!-- END GRID -->
+    </div>
+    <!-- END MAIN -->
+</div>
+
+<script>
+    filterSelection("all")
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; btns.length > i; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("FilterSelected");
+            current[0].className = current[0].className.replace(" FilterSelected", "");
+            this.className += " FilterSelected";
+        });
+    }
+</script>
+
+</body>
+
+</html>
